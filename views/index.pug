@@ -1,0 +1,106 @@
+extends layout
+
+block head
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Study Timer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+block content
+  <div class="myModal" id="about-modal">
+  <div class="inner-about-modal">
+  <span id="close-about-modal" role="button">&times;</span>
+  <h3>ABOUT:</h3>
+  <h4>Step 1:</h4>
+  <p>Enter your tasks in the "To Do" side.</p>
+  <p>Press Start.</p>
+  <p>For 25 minutes, ignore all distractions and only work towards finishing your pre-decided tasks.</p>
+  <h4>Step 2:</h4>
+  <p>Break for 5 minutes, catching up on all your notifications and relax</p>
+  <h4>Step 3:</h4>
+  <p>Repeat steps 1 & 2, clicking "complete" on tasks as you finish them.</p>
+  <p>Continue until you've accumulated four pomodoro tomatoes!</p>
+  </div>
+  </div>
+  <div class="myModal" id="save-modal">
+  <div class="inner-save-modal">
+  <span id="close-save-modal" role="button">&times;</span>
+  <h3>SAVE:</h3>
+  <h4>Would you like to save the current session?</h4>
+  <p>You have completed these tasks:</p>
+  <ul id="tasks-to-save">
+
+  </ul>
+  </div>
+  </div>
+  <div class="myModal" id="myModal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="modal-notification"></h3>
+  </div>
+  </div>
+  <div class="container">
+
+  <section id="top">
+  <div id="title">
+  <h1>POMODORO</h1>
+  </div>
+  <nav>
+  <ul>
+  <li><a class="about-modal-button" href="#">ABOUT</a></li>
+  <li><a class="save-modal-button" href="#">SAVE</a></li>
+  <div class="dropdown">
+  <li><a class="dropdown-button" href="#">OPTIONS</a></li>
+  <ul id="options-menu" class="dropdown-content">
+  <li class="option" id="restart-timer-button">Restart round</li>
+  <li class="option" id="reset-session-button">Reset session</li>
+  </ul>
+  </div>
+  </ul>
+  </nav>
+  <section id="task-tracker">
+  <h3>Completed Tasks: </h3>
+  <span id="completed-tasks"></span>
+  <span>/</span>
+  <span id="total-tasks"></span>
+  <div id="mode-display">
+  <h3>Mode:</h3>
+  <span id="timer-mode"></span>
+  </div>
+  </section>
+  <div id="timer">
+  <section id="numbers">
+  <div>
+      <span id="minutes">00</span>
+      <span id="colon">:</span>
+      <span id="seconds">00</span>
+  </div>
+  </section>
+  <button id="button" type="button">BEGIN</button>
+  </div>
+  <div id="tomatoes">
+
+  </div>
+  </section>
+  <section id="lists">
+  <div id="todo-container">
+  <h3>To Do:</h3>
+  <form id="todo-form" action="">
+  <input id="new-task" autocomplete="off" placeholder="new task"type="text">
+  </form>
+  <ul id="todo-list">
+
+  </ul>
+  </div>
+  <div id="done-tasks">
+  <h3>Done:</h3>
+  <ul id="done-list">  
+
+  </ul>
+  </div>
+  </div>
+  </section>
+  <footer>
+  <div>The Pomodoro app was designed and coded by Thomas Grzesiakowski. Find me on Github @ github.com/thomasgrz</div>
+  <div>Icons made by <a href="https://www.flaticon.com/authors/prettycons" title="prettycons">prettycons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+  </footer>

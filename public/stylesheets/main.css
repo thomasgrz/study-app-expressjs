@@ -1,0 +1,386 @@
+/* set up body */
+html,body{
+    max-width:100%;
+    background-color:#333;
+    font-family: 'Roboto','sans-serif';
+}
+/* navigation bar*/
+nav{
+    display:block;
+    height:1em;
+    padding-bottom:1em;
+    text-align: center;
+}
+
+nav ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+nav li{
+    background-color:#CCCCFF;
+    display:inline-block;
+    border-radius:5px;
+    height:1em;
+    padding:10px;
+}
+nav li a:link{
+    text-decoration:none;
+    color:white;
+    /* padding:inherit; */
+}
+nav li a:visited{
+    color:white;
+}
+nav li a:hover, nav li a:focus{
+    font-weight:900;
+    color:#ff6666;
+}
+/* target the top pomodor app*/
+.container{
+    min-width:285px;
+    max-width:600px;
+    margin: auto;
+    background-color:white;
+    height:100%; 
+    padding:10px;
+    border-radius:4px;
+}
+.container h1{
+    margin: 5px auto;
+    text-align: center;
+
+}
+
+
+/* target entire upper module*/
+#top{
+    background-color:#CCCCFF;
+    color:white;
+    border-radius:5px;
+    padding:5px;
+}
+
+#mode-display{
+    float:right;
+}
+/* title and tomatoes */
+#title{
+    display:flex;
+    flex-direction: row;
+    max-width: 100%;
+    flex-wrap:wrap;
+}
+#tomatoes{
+    display:flex;
+    flex-direction:row;
+    height:50px;
+    margin:auto;
+}
+img{
+    width:50px;
+}
+#task-tracker h3{
+    display:inline;
+
+}
+#timer-type{
+    float:right;
+}
+
+
+/*  minutes, seconds, start button */
+div#timer{
+    display: block;
+    float:none;
+    box-sizing:content-box;
+    margin:auto;
+    font-size:5em;
+}
+div#timer button{
+    display:block;
+    margin:0 auto;
+    float:none;
+    background-color:white;
+    height:30px;
+    width: 50px;
+    height:50px;
+    border-radius:50%;
+    border:1px solid white;
+    font-weight:900;
+    padding:2px;
+}
+div#timer button:focus{
+    outline:none;
+}
+div#timer button[mode=start]{
+    background:rgb(103, 160, 103);
+    color:white;
+    font-weight:900;
+} 
+div#timer button[mode=pause]{
+    background:#ff6666;
+    color:white;
+    font-weight: 900;
+}
+
+section #numbers div{
+    text-align: center;
+}
+
+.finished{
+    padding-top:5px;
+}
+/* both lists*/
+#lists{
+    display:flex;
+    box-sizing:border-box;
+    list-style:none;
+}
+ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+/* todo list */
+#todo-container{
+    width:50%;
+    height:100%;
+    padding-left:10px;
+    padding-bottom:10px;
+}
+
+div#todo-container input{
+    margin-bottom:5px;
+    height:1em;
+
+}
+li[iscomplete=false] > button{
+    height:2em;
+    background-color:#F8F8FF;
+    color:#333;
+    border-radius:4px;
+    margin-left:30px;
+}
+/* div#todo-container button{
+    display:inline;
+    padding-left:10px;
+} */
+#todo-list li:hover{
+    text-decoration: line-through;
+}
+/*done list */
+#done-tasks{
+    width:50%;
+    padding-left:10px;
+}
+
+div li[iscomplete=true] span{
+    overflow-x:auto;
+    background-color:#ff6666;
+    color:white;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius:5px;
+    margin:0,0,0,7px;
+    list-style-type: none;
+}
+
+/* footer */
+
+footer{
+    position:relative;
+    left:0;
+    bottom:0;
+    font-size:.5em;
+    color:#F8F8FF;
+    margin-top:50px;
+    margin:auto;
+    width:600px;
+    display:block;
+    max-width:100%;
+}
+footer a:link{
+    color:#F8F8FF;
+    text-decoration:none;
+   
+}
+
+/* my modal */
+.myModal{
+    z-index:1;
+}
+div#myModal {
+    display:none;
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.651)
+}
+
+div#myModal .modal-content{
+    background-color:#fefefe;
+    margin:10% auto;
+    width:80%;
+    padding:20px;
+    max-width:200px;
+    border-radius: 4px;
+    text-align:center;
+}
+div#myModal span{
+    font-size:2em;
+}
+div#myModal span:hover{
+    font-size:2em;
+    color:#ff6666;
+    cursor:pointer;
+}
+div#about-modal{
+    z-index:1;
+    display:none;
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.651)
+}
+
+div#about-modal .inner-about-modal{
+    background-color:#fefefe;
+    margin:3% auto;
+    width:80%;
+    padding:0px 20px 10px 20px;
+    max-width:400px;
+    border-radius: 4px;
+    text-align:center;
+}
+div#about-modal .inner-about-modal h3{
+    padding-top:20px;
+}
+span[role="button"]{
+    font-size:1em;
+    color:rgba(23, 18, 18, 0.762);
+    font-size:2em;
+    float:right;
+}
+
+span[role="button"]:hover{
+    cursor:pointer;
+    color:#ff6666;
+}
+
+div#save-modal{
+    display:none;
+    z-index:1;
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.651)
+}
+
+div#save-modal .inner-save-modal{
+    background-color:#fefefe;
+    margin:3% auto;
+    width:80%;
+    padding:10px 20px 10px 20px;
+    max-width:400px;
+    border-radius: 4px;
+    text-align:center;
+
+}
+.dropdown{
+    position: relative;
+    display:inline-block;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    width:120px;
+    margin-right:10px;
+    box-shadow: 2px 10px 30px 10px rgba(85, 84, 84, 0.623);
+    z-index:1;
+    border-radius:4px;
+}
+
+.dropdown-content a{
+    color:#333;
+    padding: 10px 15px;
+    text-decoration:none;
+    display:block;
+}
+
+.dropdown-content a:hover{
+    color:#ff6666;
+}
+.dropdown-content li{
+    color:#333;
+    width:100%;
+    border-radius:0px;
+    padding-right:0;
+    background-color:#fefefe;
+    padding-left:0;
+
+}
+.dropdown-content li:hover{
+    color:#ff6666;
+    cursor:pointer;
+    font-weight:900;
+}
+.show{
+    display:block;
+}
+
+@media screen and (max-width:420px){
+    html,body{
+        width:100%;
+        background-color:white;
+        padding:0;
+        margin:0;
+    }
+    .container{
+        min-width:100%;
+        background-color:#CCCCFF;
+        padding:0;
+        margin:0;
+    }
+    div#mode-display{
+        display:block;
+        width:100%;
+    }
+    section#top{
+        width:100%;
+       padding:0;
+       margin:0;
+       border-radius:0;
+       border-bottom:3px solid #333;
+    }
+    div#todo-container{
+        width:100%;
+    }
+    section#lists{
+        background-color:white;
+        width:100%;
+        display:flex;
+        flex:1;
+        flex-direction:row;
+        flex-wrap:wrap;
+        width:100%;
+    }
+    #task-tracker,
+    #mode-display{
+        padding-left:10px;
+    }
+    footer{
+        color:#333;
+    }
+    footer a:link{
+        color:#333;
+    }
+
+}
