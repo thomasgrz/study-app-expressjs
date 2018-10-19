@@ -8,7 +8,7 @@ html,body{
 .demo-notification{
     color:#ff6666;
     background-color:#fefefe;
-    position:absolute;
+    position:fixed;
     top:0;
     left:0;
     display:inline-block;
@@ -17,6 +17,8 @@ html,body{
     padding-left:2px;
     border-bottom-right-radius: 4px;
     font-weight:900;
+    border-right:1px solid rgba(102, 102, 102, 0.788);
+    border-bottom:1px solid rgba(102, 102, 102, 0.788);
 }
 /* navigation bar*/
 nav{
