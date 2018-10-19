@@ -4,6 +4,20 @@ html,body{
     background-color:#333;
     font-family: 'Roboto','sans-serif';
 }
+/* demo notification*/
+.demo-notification{
+    color:#ff6666;
+    background-color:#fefefe;
+    position:absolute;
+    top:0;
+    left:0;
+    display:inline-block;
+    font-size:.25em;
+    padding-right:5px;
+    padding-left:2px;
+    border-bottom-right-radius: 4px;
+    font-weight:900;
+}
 /* navigation bar*/
 nav{
     display:block;
