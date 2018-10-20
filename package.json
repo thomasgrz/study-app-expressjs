@@ -5,6 +5,10 @@
   "scripts": {
     "start": "node ./bin/www"
   },
+  "engines":{
+    "node":"8.11.3",
+    "npm": "6.2.0"
+  },
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
@@ -14,6 +18,6 @@
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
-    "pg-promise": "^8.5.0"
+    "pg-promise": "^8.5.1"
   }
 }
