@@ -1,5 +1,7 @@
 //load env variables
 require('dotenv').config()
+var pgp = require('pg-promise')
+var db = pgp('postgres://inuuahdsmwclax:a03cb851434a9a7aacaec3893021774053e29e43f286590c6a934a7e1824e7e2@ec2-54-243-46-32.compute-1.amazonaws.com:5432/db33ep3efjjo2s');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
