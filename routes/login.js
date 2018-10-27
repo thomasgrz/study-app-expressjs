@@ -10,6 +10,7 @@ router.get('/',function(req,res,next){
 router.post('/',function(req,res){
     // console.log(this)
     // res.send(this)
+    
     const client = new Client({
         connectionString: process.env.DATABASE_URL,
         ssl:true,
