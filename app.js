@@ -1,7 +1,13 @@
+//this section was to test db connection
+//but it makes no sense to store this in
+//the splash page so it has been moved to login
+//where it will be used
+//and a value can be set in memory
 //load env variables
-require('dotenv').config()
-var pgp = require('pg-promise')
-var db = pgp('postgres://inuuahdsmwclax:a03cb851434a9a7aacaec3893021774053e29e43f286590c6a934a7e1824e7e2@ec2-54-243-46-32.compute-1.amazonaws.com:5432/db33ep3efjjo2s');
+// require('dotenv').config()
+// var pgp = require('pg-promise')()
+// var db = pgp(`${process.env.DATABASE_URL}`);
+var { Client } = require("pg");
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -10,9 +16,24 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login')
-console.log(process.env.DATABASE_URL)
 var app = express();
 
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl:true,
+})
+
+client.connect().catch((err)=>console.error(err))
+
+client.query('SELECT * FROM users WHERE name=\'thomas\';',(err,res)=>{
+  if(err){
+    throw err;
+  }
+  for(let row of res.rows){
+    console.log(JSON.stringify(row))
+  }
+  client.end()
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
