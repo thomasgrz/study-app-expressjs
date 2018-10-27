@@ -1,4 +1,4 @@
-var config = require('dotenv').config().parsed
+// var config = require('dotenv').config().parsed
 var { Client } = require("pg");
 var express = require('express')
 var router = express.Router();

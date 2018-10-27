@@ -18,22 +18,7 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login')
 var app = express();
 
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl:true,
-})
 
-client.connect().catch((err)=>console.error(err))
-
-client.query('SELECT * FROM users WHERE name=\'thomas\';',(err,res)=>{
-  if(err){
-    throw err;
-  }
-  for(let row of res.rows){
-    console.log(JSON.stringify(row))
-  }
-  client.end()
-});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
