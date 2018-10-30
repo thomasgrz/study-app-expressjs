@@ -7,7 +7,7 @@
 // require('dotenv').config()
 // var pgp = require('pg-promise')()
 // var db = pgp(`${process.env.DATABASE_URL}`);
-var { Client } = require("pg");
+var http = require('http');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -15,7 +15,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var loginRouter = require('./routes/login')
+var loginRouter = require('./routes/login');
+var db = require('./models/index');
 var app = express();
 
 
@@ -49,4 +50,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+db.sequelize.sync().then(()=>{
+  http.createServer(app).listen(8000,()=>{
+    console.log('CUSTOM: Express is listening on port '+ app.get('8000'))
+  })
+})
 module.exports = app;
