@@ -7,7 +7,6 @@
 // require('dotenv').config()
 // var pgp = require('pg-promise')()
 // var db = pgp(`${process.env.DATABASE_URL}`);
-var http = require('http');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -16,7 +15,6 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
-var db = require('./models/index');
 var app = express();
 
 
