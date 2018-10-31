@@ -6,7 +6,7 @@
 //and a value can be set in memory
 //load env variables
 require('dotenv').config()
-
+const app = require('../app')
 if(!global.hasOwnProperty('db')){
 
     var Sequelize = require('sequelize'),
@@ -24,7 +24,6 @@ if(!global.hasOwnProperty('db')){
     }else{
         //we must be on local
         sequelize = new Sequelize('postgres://localhost/my_new_database')
-        console.log('this is from a local machine')
     }
     global.db={
         Sequelize: Sequelize,
