@@ -15,12 +15,12 @@ if(!global.hasOwnProperty('db')){
     if(!process.env.IS_DEV){
         console.log('sequelize crashed')
         //we must be on heroku then
-        sequelize = new Sequelize(process.env.DATABASE_URL,{
-            dialect:'postgres',
-            protocol:'postgres',
-            operatorAliases:false,
-            logging:false
-        })
+        // sequelize = new Sequelize(process.env.DATABASE_URL,{
+        //     dialect:'postgres',
+        //     protocol:'postgres',
+        //     operatorAliases:false,
+        //     logging:false
+        // })
     }else{
         //we must be on local
         sequelize = new Sequelize('postgres://localhost/my_new_database')
