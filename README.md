@@ -1,3 +1,3 @@
 # STUDY APP (Express)
 
-Study App can be viewed at <a href='thomasgrz-studyapp.herokuapp.com'>Heroku</a>
+Study App can be viewed at <a href='https://thomasgrz-studyapp.herokuapp.com'>Heroku</a>
