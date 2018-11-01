@@ -1,0 +1,15 @@
+extends layout
+block head
+    link(rel='stylesheet',href='stylesheets/login.css')
+
+block content
+    div.container
+        section#top
+            form(id='registration',method='post',action='/register')
+                h1='Register'
+                if exists
+                    p(class='exists')='That user already exists. Please choose a different username.'
+                input(type='text',placeholder='username',name='username')
+                input(type='text',placeholder='password',name='password')
+                button(type='submit',name='submit') Submit
+    script(src='/javascripts/registrationform.js')
