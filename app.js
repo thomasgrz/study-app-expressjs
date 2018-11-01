@@ -49,9 +49,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// db.sequelize.sync().then(()=>{
-//   http.createServer(app).listen(8000,()=>{
-//     console.log('CUSTOM: Express is listening on port '+ app.get('8000'))
-//   })
-// })
+
 module.exports = app;
