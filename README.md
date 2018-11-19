@@ -5,7 +5,7 @@ Study App is a persona project that can be viewed at <a href='https://thomasgrz-
 Study App is meant to assist with studying and focus.
 It is based off the <a href='https://en.wikipedia.org/wiki/Pomodoro_Technique'>Pomorodo Method</a>
 
-If you would like to see or use it in real time, simply clone the repo, go into the `timer.js` file and change top line to:
+If you would like to see or use it in real time, simply clone the repo, go into the `public/javascripts/timer.js` file and change top line to:
 
 ```
 INTERVAL_RATE = 1000
