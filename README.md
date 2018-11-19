@@ -13,4 +13,4 @@ INTERVAL_RATE = 1000
 
 This will change it to real time.
 
-This application is currently under production as I am working on adding user authentication with PassportJS and data aggregation with PostgreSQL.
+This application is currently under development as I am working on adding user authentication with PassportJS and data aggregation with PostgreSQL.
